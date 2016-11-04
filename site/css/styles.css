@@ -1,372 +1,52 @@
 body {
-  font-size: 16px;
-  color: #fff;
-  background-color: #61122f;
-  font-family: 'Oxygen', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 /** HEADER **/
 #header-nav {
-  background-color: #f6b319; /*yellow, no curve to border edges*/
+  background-color: #A9A9A9; 
   border-radius: 0;
-  border: 0;
+  border: solid black 2px;
+  height: 90px;
 }
 
-#logo-img {
-  background: url('../images/restaurant-logo_large.png') no-repeat; /*images folder match div with px of image*/
-  width: 150px;
-  height: 150px;
-  margin: 10px 15px 10px 0;
-}
-
-.navbar-brand {
-  padding-top: 25px;
-}
 .navbar-brand h1 { /* Restaurant name */
-  font-family: 'Lora', serif;
-  color: #557c3e; /*green*/
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #222;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: .75;
-}
-.navbar-brand a:hover, .navbar-brand a:focus {
-  text-decoration: none; /*no link decoration*/
-}
-.navbar-brand p { /* Kosher cert */
-  color: #000;
-  text-transform: uppercase;
-  font-size: .7em;
-  margin-top: 15px;
-}
-.navbar-brand p span { /* Star-K */
-  vertical-align: middle;
-}
-
-#nav-list { /*part of ul in nav button*/
-  margin-top: 10px;
-}
+    font-size: 30px; /* 1vw = 1% of viewport width. stretches based on browser width */
+    color: black;
+    font-weight: bold;
+    float: left;
+  }
 #nav-list a {
-  color: #951C49; /*maroon*/
-  text-align: center;
-}
-#nav-list a:hover { /*white background when mouse hovers over*/
-  background: #E7E7E7;
-}
-#nav-list a span {
-  font-size: 1.8em; /*80%*/
-}
-
-#phone {
-  margin-top: 5px;
-}
-#phone a { /* Phone number */
-  text-align: right;
-  padding-bottom: 0;
-}
-#phone div { /* We Deliver */
-  color: #557c3e; /*gree*/
-  text-align: right;
-  padding-right: 15px;
+  background-color: white;
+  border: solid black 2px;
+  font-size: 20px;
+  color: black;
 }
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #61122f; /*maroon. changes color of nav bar*/
+  border: 1px solid black;
 }
 .navbar-header button.navbar-toggle {
-  clear: both; /*brings up to nav bar header*/
-  margin-top: -30px;
+  clear: both; 
+  margin-top: -25px;
 }
-/* END HEADER */
-
-/* FOOTER */
-.panel-footer { /*overriding boostrap class*/
-  margin-top: 30px;
-  padding-top: 35px;
-  padding-bottom: 30px;
-  background-color: #222; /*black*/
-  border-top: 0;
+.text-center {
+  padding-top: 20px;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
 }
-.panel-footer div.row { /*address testimonials*/
-  margin-bottom: 35px;
-}
-#hours, #address {
-  line-height: 2;
-}
-#hours > span, #address > span {
-  font-size: 1.3em;
-}
-#address p {
-  color: #557c3e; /*green*/
-  font-size: .8em;
-  line-height: 1.8;
-}
-#testimonials {
-  font-style: italic;
-}
-#testimonials p:nth-child(2) { /*2nd paragraph to have a margin top of 25px. separates testimonials*/
-  margin-top: 25px;
-}
-/* END FOOTER */
-
-
-
-/* HOME PAGE */
-.container .jumbotron {
-  box-shadow: 0 0 50px #3F0C1F; /*used for home page for all media sizes*/
-  border: 2px solid #3F0C1F;
+.container-fluid {
+  background-color: #A9A9A9;
+  padding: 10px;
+  margin: 50px 15px 15px 15px;
 }
 
-#menu-tile, #specials-tile, #map-tile {
-  height: 250px;
-  width: 100%; /*100% of their container element*/
+h2 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
   margin-bottom: 15px;
-  position: relative; /*anchors child elements*/
-  border: 2px solid #3F0C1F;
-  overflow: hidden; /*clips anything sticking out*/
-}
-#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc; /*grey shadow*/
-}
-#menu-tile {
-  background: url('../images/menu-tile.jpg') no-repeat; /*dont switch images with browser size by positioning center. main photo is in the center so wont have issues viewing at any size*/
-  background-position: center;
-}
-#specials-tile {
-  background: url('../images/specials-tile.jpg') no-repeat;
-  background-position: center;
-}
-#menu-tile span, #specials-tile span, #map-tile span {
-  position: absolute; /*position spans absolutely within tiles*/
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.6em; /*1.6x what it is inheriting*/
-  text-transform: uppercase;
-  background-color: #000;
-  color: #fff;
-  opacity: .8; /*see through*/
-}
-/* END HOME PAGE */
-
-/* MENU CATEGORIES PAGE */
-.category-tile { /*picture*/
-  position: relative; /*anchor*/
-  border: 2px solid #3F0C1F;
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 15px;
-}
-.category-tile span { /*text on picture*/
-  position: absolute; /*stuck to anchor*/
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  background-color: #000;
-  color: #fff;
-  opacity: .8;
-}
-.category-tile:hover {
-  box-shadow: 0 1px 5px 1px #cccccc;
-}
-
-#menu-categories-title + div { /*next sibling to menu-categories-title. i.e. div class = center "white rice blah blah"*/
-  margin-bottom: 50px;
-}
-/* END MENU CATEGORIES PAGE */
-
-/* SINGLE CATEGORY PAGE */
-.menu-item-tile { /*single cell grid. separate from the next row*/
-  margin-bottom: 25px;
-}
-.menu-item-tile hr { /*omly shows up at xs as a line*/
-  width: 80%;
-}
-.menu-item-tile .menu-item-price { /*styling text*/
-  font-size: 1.1em;
-  text-align: right;
-  margin-top: -15px; /*needed to move up pricing*/
-  margin-right: -15px;
-}
-.menu-item-tile .menu-item-price span { /*pint/quart text*/
-  font-size: .6em;
-}
-.menu-item-photo { /*picture has the item # bottom right so needs to be relative.*/
-  position: relative;
-  border: 2px solid #3F0C1F; 
-  overflow: hidden;
-  padding: 0;
-  margin-right: -15px;
-  margin-left: auto;
-  margin-bottom: 20px;
-  max-width: 250px; /*dont stretch picture any more than 250 as that is the size of the image link*/
-}
-.menu-item-photo div { /*item # text*/
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80px;
-  background-color: #557c3e;
-  text-align: center;
-}
-.menu-item-description { /*item description needs to be moved away from right element/browser*/
-  padding-right: 30px;
-}
-h3.menu-item-title { /*title of the menu item. margin bottom and correcting inherited characteristics*/
-  margin: 0 0 10px;
-}
-.menu-item-details { /*text for menu item description*/
-  font-size: .9em;
-  font-style: italic;
-}
-/* END SINGLE CATEGORY PAGE */
-
-
-/********** Large devices only **********/
-@media (min-width: 1200px) { /*breakpoints from bootstrap*/
-  .container .jumbotron {
-    background: url('../images/jumbotron_1200.jpg') no-repeat; /*main image*/
-    height: 675px;
-  }
-}
-
-/********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* Header */
-  #logo-img {
-    background: url('../images/restaurant-logo_medium.png') no-repeat; /*make logo smaller. different logo which is smaller in size*/
-    width: 100px;
-    height: 100px;
-    margin: 5px 5px 5px 0;
-  }
-  /* End Header */
-
-  /* Home Page */
-  .container .jumbotron {
-    background: url('../images/jumbotron_992.jpg') no-repeat;
-    height: 558px;
-  }
-  /* End Home Page */
-}
-
-/********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Home Page */
-  .container .jumbotron {
-    background: url('../images/jumbotron_768.jpg') no-repeat;
-    height: 432px;
-  }
-  /* End Home Page */
-}
-
-/********** Extra small devices only **********/
-@media (max-width: 767px) {
-  /* Header */
-  .navbar-brand {
-    padding-top: 10px; /*decrease padding*/
-    height: 80px; /*set constant height*/
-  }
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 10px; 
-    font-size: 5vw; /* 1vw = 1% of viewport width. stretches based on browser width */
-  }
-  .navbar-brand p { /* Kosher cert */
-    font-size: .6em;
-    margin-top: 12px;
-  }
-  .navbar-brand p img { /* Star-K */
-    height: 20px;
-  }
-
-  #collapsable-nav a { /* Collapsed nav menu text */
-    font-size: 1.2em;
-  }
-  #collapsable-nav a span { /* Collapsed nav menu glyph. overrides due to specificity! */
-    font-size: 1em; /*100% of font size it inherits*/
-    margin-right: 5px;
-  }
-
-  #call-btn > a {
-    font-size: 1.5em;
-    display: block;
-    margin: 0 20px;
-    padding: 10px;
-    border: 2px solid #fff;
-    background-color: #f6b319;
-    color: #951c49;
-  }
-  #xs-deliver {
-    margin-top: 5px;
-    font-size: .7em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-  /* End Header */
-
-  /* Footer */
-  .panel-footer section {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .panel-footer section:nth-child(3) {
-    margin-bottom: 0; /* margin already exists on the whole row */
-  }
-  .panel-footer section hr { /*horizontal rule*/
-    width: 50%;
-  }
-  /* End Footer */
-
-  /* Home Page */
-  .container .jumbotron {
-    margin-top: 30px; /*specificity used to override padding*/
-    padding: 0;
-  }
-  #menu-tile, #specials-tile {
-    width: 360px; /*aligns tiles in the center of the xs browser*/
-    margin: 0 auto 15px; /*top left bottom right*/
-  }
-
-  .menu-item-photo {
-    margin-right: auto; /*rather than -15px*/
-  }
-  .menu-item-tile .menu-item-price { /*centers text for price*/
-    text-align: center;
-  }
-  .menu-item-description {
-    text-align: center;;
-  }
-}
-
-
-/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
-@media (max-width: 479px) {
-  /* Header */
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 5px;
-    font-size: 6vw; /*6x viewport*/
-  }
-  /* End Header */
-  
-  /* Home page */
-  #menu-tile, #specials-tile {
-    width: 280px;
-    margin: 0 auto 15px;
-  }
-
-  .col-xxs-12 { /*created our own class (not in bootstrap). used for example menu categories. copy forward boostrap.css styles below.*/
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    float: left;
-    width: 100%;
-  }
 }
